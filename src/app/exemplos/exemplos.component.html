@@ -1,0 +1,4 @@
+<p>Título: {{ movie.title | uppercase | lowercase | camelCase }}</p>
+<p>Data de lançamento: {{ movie.release | date: 'dd-MMM-YYYY' }}</p>
+<p>Valor gasto: {{ movie.budget | currency: 'BRL' }}</p>
+<p>JSON: {{ movie | json }} </p>
