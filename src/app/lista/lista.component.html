@@ -1,0 +1,18 @@
+&nbsp;
+<div class="container">
+  <div class="">
+    <input type="text" class="form-control form-control-lg" [(ngModel)]="criterio" placeholder="Digite algo">
+  </div>
+  <br/>
+  <div class="col-12">
+    <div class="row">
+      <div class="card col-4" *ngFor="let filme of filmes | filtro: criterio">
+        <div class="card-body">
+          <p>Título: {{ filme.titulo }}</p>
+          <p>Ano: {{ filme.ano | date: 'dd-MM-yyyy' }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

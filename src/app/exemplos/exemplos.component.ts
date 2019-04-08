@@ -10,7 +10,7 @@ export class ExemplosComponent implements OnInit {
   constructor() { }
 
   movie: any = {
-    title: "Fight club",
+    title: "fight club",
     release: new Date(1999, 4, 21),
     budget: 300.000
   }
