@@ -9,7 +9,7 @@ export class FiltroPipe implements PipeTransform {
 
     if (!value.length || !args)
       return value;
-
+    
     return value.filter(item => 
       item.titulo.toLocaleLowerCase()
         .includes(args.toLocaleLowerCase())

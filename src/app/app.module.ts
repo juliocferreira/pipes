@@ -1,3 +1,4 @@
+import { FilmeService } from './service/filme.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +20,9 @@ import { ListaComponent } from './lista/lista.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers:[
+    FilmeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
