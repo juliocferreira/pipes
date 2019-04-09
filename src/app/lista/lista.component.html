@@ -1,15 +1,19 @@
 &nbsp;
 <div class="container">
   <div class="">
-    <input type="text" class="form-control form-control-lg" [(ngModel)]="criterio" placeholder="Digite algo">
+    <input type="text" class="form-control form-control-lg"
+    #input 
+    (keyup.enter)="search(criterio)"
+    [(ngModel)]="criterio" placeholder="Digite algo">
   </div>
   <br/>
   <div class="col-12">
     <div class="row">
-      <div class="card col-4" *ngFor="let filme of filmes | filtro: criterio">
+      <div class="card col-4" *ngFor="let filme of filmes">
         <div class="card-body">
-          <p>Título: {{ filme.titulo }}</p>
-          <p>Ano: {{ filme.ano | date: 'dd-MM-yyyy' }}</p>
+          <p>{{ filme | json }}</p>
+          <!-- <p>Título: {{ filme.titulo || filme.Title }}</p>
+          <p>Ano: {{ filme.ano  || filme.Released | date: 'dd-MM-yyyy'}}</p> -->
         </div>
       </div>
     </div>

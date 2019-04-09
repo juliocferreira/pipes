@@ -1,3 +1,4 @@
+import { LoteriaService } from './service/loteria.service';
 import { FilmeService } from './service/filme.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,6 +8,7 @@ import { ExemplosComponent } from './exemplos/exemplos.component';
 import { CamelCasePipe } from './camel-case.pipe';
 import { FiltroPipe } from './filtro.pipe';
 import { ListaComponent } from './lista/lista.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { ListaComponent } from './lista/lista.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers:[
-    FilmeService
+    FilmeService,
+    LoteriaService
   ],
   bootstrap: [AppComponent]
 })
